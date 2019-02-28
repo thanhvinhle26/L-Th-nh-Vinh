@@ -1,0 +1,83 @@
+h1{
+
+	width: 20%;
+	height: 40px;
+/*background-image: url(../images/mu.jpg);
+background-repeat: no-repeat;
+background-attachment:scroll;
+background-position: 50px 50px;*/
+background-color: red;
+font-family: Arial;
+font-size: 30px;/*30pt*/
+font-style: italic;
+font-weight: 600;
+color: blue;
+text-indent: 50px;
+text-align: right;
+text-decoration: line-through;
+text-decoration: none;
+display: inline-block;
+
+}
+a{
+	text-decoration: none;
+}
+#child{
+	vertical-align: middle;
+	display: block;
+}
+h1:hover{
+	color: orange;
+	/*height: 100px;
+	width: 60px;*/
+}
+div{
+
+	height: 50px;
+	width: 100px;
+	background-color: red;
+	/*border-radius: 500px;*/
+	font-family: 'ZCOOL QingKe HuangYou', cursive;
+
+}
+#header{
+	width: 80%;
+	height: 300px;
+	background-color: transparent;
+clear: both;
+text-align: center;
+}
+#left{
+	width: 20%;
+	height: 300px;
+	background-color: red;
+	float: left;
+	text-align: center;
+
+}
+#main{
+	width: 40%;
+	height: 300px;
+	background-color: lavender;
+	float: left;
+	text-align: center;
+
+}
+#right{
+	width: 20%;
+	height: 300px;
+	background-color: #ccc;
+	float: left;
+	text-align: center;
+
+}
+#footer{
+	width: 80%;
+	height: 300px;
+	background-color: orange;
+	clear: both;
+	text-align: center;
+
+}
+
+/*h1>>h6,p,div*/

@@ -1,0 +1,404 @@
+#background
+{
+	background-image: url(../images2/tuyet.jpg);
+	
+	width: 2000;
+	height: 1800px;
+	background-position: top center;
+}
+
+
+#wrapper {
+	width: 90%;
+	height: auto;    
+	margin: 0px auto;
+	
+
+}
+
+
+.bo
+{
+	display: flex;
+	flex-direction: row;
+}
+.bo3
+{
+	display: flex;
+	flex-direction: row;
+}
+.bo2
+{
+	display: flex;
+	flex-direction: column;
+}
+#header{
+	width: 80%;
+	height: 450px;		
+	text-align: center;
+	background-image: url(../images2/123.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	
+}
+#menu
+{
+	width: 80%;
+	height: 40px;	
+	background-color: #1C1C1C;	
+	color: orange;
+	
+}
+#editmenu
+{
+	width: 100px;
+
+
+}
+#editmenu:hover
+{
+	color: red;
+}
+#thanhcam
+{
+	width: 80%;
+	height: 2px;
+	background-color: orange;
+}
+#left{
+	width: 15%;
+	height: 1100px;	
+	text-align: center;
+	margin-left: 130px;
+	background-color: white;
+
+}
+#center{
+	width: 50%;
+	height: 1100px;
+	background-color: lavender;
+	text-align: center;
+	margin-left: 0px;
+	background-color: white;
+
+}
+#right{
+	width: 15%;
+	height: 1100px;
+	background-color: white;
+	text-align: center;
+	margin-left: 0px;
+
+}
+#footer{
+	width: 80%;
+	height: 100px;
+	background-color: #1C1C1C;	
+	text-align: center;
+	padding-top: 25px;
+
+}
+#hienBorder
+{
+	border-width: 0.5px;
+	border-color: lavender;
+	height: 150px;
+	width: 190px;
+	border-style: solid;
+}
+#hover1:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover2:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover3:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover4:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover5:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover6:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover7:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover8:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover9:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover10:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover11:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover12:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+#hover13:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+h1{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: left;
+	font-weight: 200;
+	padding-left: 5px;
+
+}
+h2
+{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 5px;
+	color: white;
+	padding-top: 20px;
+}
+h3{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 5px;
+	color: white;
+	padding-top: 10px;
+}
+h6
+{
+	font-family: Arial;
+	font-size: 12px;
+	
+	padding-left: 5px;
+	color: white;
+	padding-bottom: 20px;
+}
+h5{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: right;
+	padding-left: 5px;
+	color: white;
+	padding-top: 10px;
+}
+h4
+{
+	font-family: Arial;
+	font-size: 12px;
+	color: orange;
+	
+	padding-left: 5px;
+	padding-top: 1px;
+}
+img.canAnh1
+{
+	width: 100%;
+}
+#mauCam
+{
+	color: orange;
+}
+#hienBorder2
+{
+
+
+	height: 180px;
+	width: 190px;
+	background-image: url(../images/img1.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#hienBorder3
+{
+
+
+	height: 180px;
+	width: 190px;
+	background-image: url(../images/img2.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#hienBorder4
+{
+	border-width: 0.5px;
+	border-color: lavender;
+	height: 90px;
+	width: 190px;
+	border-style: solid;
+}
+#hienBorder5
+{
+	border-width: 0.5px;
+	border-color: lavender;
+	height: 220px;
+	width: 190px;
+	border-style: solid;
+}
+#hienBorder6
+{
+
+
+	height: 150px;
+	width: 190px;
+	background-image: url(../images/img3.gif);
+
+	background-repeat: no-repeat;
+
+}
+#hienBorder7
+{
+
+
+	height: 150px;
+	width: 190px;
+	background-image: url(../images/img4.gif);
+
+	background-repeat: no-repeat;
+
+}
+#hienBorder8
+{
+
+
+	height: 150px;
+	width: 190px;
+	background-image: url(../images/img5.gif);
+
+	background-repeat: no-repeat;
+
+}
+#editcenter1
+{
+	background-color:  #ECAB53;
+	border-radius: 30px;
+	height: 80px;
+	width: 95%;
+	margin-left: 10px;
+}
+#editcenter2
+{
+	
+	background-image: url(../images2/main_bar_left.gif);
+	background-repeat: no-repeat;
+	height: 35px;
+	width: 95%;
+	background-size: cover;
+	margin-left: 10px;
+}
+#editcenter3
+{
+	
+	margin-left: 10px;
+	margin-top: 2px;
+}
+#editcenter4
+{
+	background-image: url(../images2/phanmem.gif);
+	margin-left: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 150px;
+	
+}
+#editcenter5
+{
+	
+	margin-left: 10px;
+	
+	width: 400px;
+	height: 100px;
+	
+}
+#editcenter6
+{
+	
+	background-image: url("../images2/main_bar_right (2).gif");
+	background-repeat: no-repeat;
+	height: 35px;
+	width: 95%;
+	background-size: cover;
+	margin-left: 10px;
+}
+#editcenter7
+{
+	background-image: url(../images2/leroi.jpg);
+	margin-left: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 150px;
+	
+}
+#editcenter8
+{
+	background-image: url(../images2/doanhnghiep.gif);
+	margin-left: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 150px;
+	
+}
+#editcenter9
+{
+	background-image: url(../images2/anhvien.gif);
+	margin-left: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 150px;
+	
+}
+#editbar
+{
+	background-image: url("../images2/menu_bar (1).gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 35px;
+
+}
+#thanhNgang
+{    width: 80%;
+	height: 6px;
+	background-color: white;
+}
+#thanhNgang2
+{   width: 80%;
+	height: 2px;
+	
+	background-color: #1C1C1C;
+}

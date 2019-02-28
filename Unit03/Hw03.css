@@ -1,0 +1,49 @@
+img.canAnh {display: inline-block;} 
+
+img.canAnh2 {display: block; } 
+
+
+.news{
+	width: 100%;
+	height: auto;
+	padding: 5px;
+	background-color: transparent;
+}
+#canGiuaChu
+{
+	text-align: center;
+}
+#canMiddle
+{
+	text-align: center;
+	vertical-align: middle;
+}
+#canTraiChu
+{
+	text-align: left;
+}
+.article {
+	width: 250px;
+	height: 42px;
+	display: inline-block;
+	margin-left: 50px;
+	vertical-align:top;
+	border-width: 3px;
+	border-spacing: 5px;
+	
+	
+}
+.hieuUng:hover
+{
+	color: blue;
+	text-decoration: underline;
+}
+.thumb {
+	width: 200px;
+	height: 150px;
+	background-color: #3e3e3e;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+} 
