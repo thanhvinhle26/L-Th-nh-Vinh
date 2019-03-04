@@ -1,0 +1,169 @@
+
+{
+	margin: 0px;
+	padding: 0px;
+}
+ul
+{
+ list-style-type: none;
+}
+.menulv1
+{
+	float: left;
+	position: relative;
+}
+.menu
+{
+    width: 70px;
+	height: 35px;
+	
+	color: white;
+	padding: 2px;
+	line-height: 35px;
+	text-align: center;
+	background-color:#78b43d;
+	
+
+
+}
+.parent
+{display: none;
+	position: absolute;
+	top: 39px;
+	left:-40px;
+}
+.parent2
+{display: none;
+	position: absolute;
+	top: 39px;
+	left:-121px;
+}
+.parent3
+{display: none;
+	position: absolute;
+	top: 39px;
+	left:200px;
+	
+}
+.menu:hover
+{
+	color: lightgreen;
+}
+.menulv1:hover .parent
+{
+display: block;
+
+}
+.menulv1:hover .parent2
+{
+display: block;
+
+}
+.menulv2:hover .parent3
+{
+display: block;
+}
+.menu5:hover
+{
+	color: white;
+	background-color: #78b43d;
+}
+
+#logo
+{
+	background-image: url(images/24h_logo_trang_chu_2015.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.menu1
+{
+	 width: 90px;
+	height: 35px;
+	
+	color: white;
+	padding: 2px;
+	line-height: 35px;
+	text-align: center;
+	background-color: #78b43d;
+	border-right: 0.1px solid lavender;
+
+}
+.menu2
+{
+	 width: 130px;
+	height: 35px;
+	
+	color: white;
+	padding: 2px;
+	line-height: 35px;
+	text-align: center;
+	background-color: #78b43d;
+	border-right: 0.1px solid lavender;
+	
+
+}
+.menu4
+{
+	 width: 105px;
+	height: 35px;
+	
+	color: white;
+	padding: 2px;
+	line-height: 35px;
+	text-align: center;
+	background-color: #78b43d;
+	}
+.menu3
+{
+	 width: 210px;
+	height: 35px;
+	text-align: right;
+	color: white;
+	padding: 2px;
+	line-height: 35px;
+	
+	background-color: #78b43d;
+}
+.menu4
+{
+	 width: 105px;
+	height: 35px;
+	
+	color: white;
+	padding: 2px;
+	line-height: 35px;
+	text-align: center;
+	background-color: #78b43d;
+	}
+.menu5
+ {
+	 width: 200px;
+	height: 25px;
+	color: black;	
+	padding-top: 0;
+	line-height: 25px;
+	text-align: left;
+	padding-left: 2px;
+	padding-top: 1px;
+	background-color:#90c95a;
+	border-top: 1px solid #78b43d;
+	border-bottom: : 1px solid #78b43d;
+	}
+	.menu6
+ {
+	 width: 200px;
+	height: 25px;
+	color: black;	
+	padding-top: 0;
+	line-height: 25px;
+	text-align: left;
+	padding-left: 2px;
+	padding-top: 1px;
+	background-color:#90c95a;
+	border-top: 1px solid #78b43d;
+	border-bottom: : 1px solid #78b43d;
+	}
+	li
+	{
+		cursor: pointer;
+	}

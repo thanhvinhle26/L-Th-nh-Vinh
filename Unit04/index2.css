@@ -1,0 +1,43 @@
+
+{
+	margin: 0px;
+	padding: 0px;
+}
+ul
+{
+ list-style-type: none;
+}
+.menulv1
+{
+	float: left;
+	position: relative;
+}
+.menu
+{
+    width: 100px;
+	height: 50px;
+	border: 1px solid red;
+	color: white;
+	padding: 2px;
+	line-height: 50px;
+	text-align: center;
+	background-color: green;
+	border-color: white;
+
+}
+.parent
+{display: none;
+	position: absolute;
+	top: 54px;
+	left:-40px;
+}
+.menu:hover
+{
+	color: lightgreen;
+}
+.menulv1:hover .parent
+{
+display: block;
+
+}
+
