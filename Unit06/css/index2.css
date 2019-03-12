@@ -1,0 +1,58 @@
+*
+{
+	magrin:0;
+}
+header
+{width: 100%;
+	height: 200px;
+	background-color: purple;
+
+
+}
+footer
+{
+	width: 100%;
+	height: 200px;
+	background-color: blue;
+	clear: both;
+}
+aside
+{
+	width: 10%;
+	height: 600px;
+	background-color: blue;
+	float: left;
+	margin:10px;
+
+}
+section
+{
+	width: 72%;
+	height: 600px;
+	background-color: white;
+	float: left;
+}
+li
+{
+	list-style-type: none;
+	width: 60%;
+	height: 50px;
+	background-color: blue;
+	margin-top: 10px;
+}
+nav
+{   width: 16%;
+	height: 300px;
+	float: left;
+}
+@media all and (max-width: 1200px) {
+	
+}
+
+/*tablet*/
+@media all and (max-width: 768px) {
+	
+}
+@media all and (max-width: 576px) {
+	
+}
