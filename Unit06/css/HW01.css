@@ -181,8 +181,10 @@ li img
 	height: 450px;
 	background-color: #47ada3;
 	clear: both;
+}
 
-	
+#contact input{
+	width:100%;
 }
 @media all and (max-width: 992px) and (min-width: 768px){
 	.p-6
