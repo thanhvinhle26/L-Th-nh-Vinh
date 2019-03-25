@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css" media="screen">
+	div
+	{
+		width: 50%;
+		height: auto;
+		margin:0 auto;
+		border: 1px solid black;
+		text-align: center;
+		font-size: 15px;
+	}
+	p
+	{
+		width: 50%;
+		height: 100px;
+		margin:0 auto;
+	}
+
+</style>
+
+</head>
+<body>
+	<div >
+		<h3 id="change">Cỡ chữ</h3>
+		<button type="" onclick="macDinh()">Mặc định</button>
+		<button type="" onclick="tangCo()">Lớn</button>
+		<button type="" onclick="giamCo()">Nhỏ</button>		
+
+	</div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur eum perferendis, sunt rerum quod odit. Dolorum consectetur perferendis nostrum quibusdam fugit, aliquid at reprehenderit doloremque beatae porro nesciunt consequatur pariatur.</p>
+
+	<script type="text/javascript">
+		function tangCo()
+		{
+			
+			var el = document.getElementById('change');
+			var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+			var fontSize = parseFloat(style); 
+			el.style.fontSize = (fontSize *1.4) + 'px';
+		}
+		function giamCo()
+		{
+			
+			var el = document.getElementById('change');
+			var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+			var fontSize = parseFloat(style); 
+			el.style.fontSize = (fontSize *0.6) + 'px';
+		}
+		function macDinh()
+		{
+			var el = document.getElementById('change');
+			var div=document.getElementsByTagName('div');
+			var font=div[0].style.fontSize;
+			el.style.fontSize = font;
+		}
+
+
+
+	</script>
+</body>
+</html>

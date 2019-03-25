@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css" media="screen">
+	.omg{
+		float: left;
+	}
+ .omg>p
+ {
+     position: absolute;
+     left: 0;
+     top: 90px;
+     background-color: lavender;
+     margin: 0;
+     padding: 20px;
+     display: none;
+ }
+ .omg>b
+ {
+     position: absolute;
+     left: 0;
+     top: 50px;
+     background-color: lavender;
+     margin: 0;
+     padding: 20px;
+     display: none;
+ }
+ .omg>button
+ {
+     margin: 0px 10px;
+     padding: 10px 20px;
+     background-color: orange;
+ }
+ #wrapper
+ {
+    width: 50%;
+    background-color: lavender;
+    margin:0 auto;
+    height: 300px;
+    position: relative;
+}
+</style>
+</head>
+<body>
+    <div id="wrapper"> 
+
+
+        <div class="omg">
+           <button type="">Tab 1</button>
+           <b>SECTION 1</b>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ratione, ut minus dolore tenetur voluptate odit amet delectus praesentium necessitatibus esse eum aliquam. Eius dignissimos voluptate mollitia eos, labore perferendis!</p>
+
+       </div>
+       <div class="omg">
+           <button type="">Tab 2</button>
+           <b>SECTION 2</b>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ratione, ut minus dolore tenetur voluptate odit amet delectus praesentium necessitatibus esse eum aliquam. Eius dignissimos voluptate mollitia eos, labore perferendis!</p>
+
+       </div>
+       <div class="omg">
+           <button type="">Tab 3</button>
+           <b>SECTION 3</b>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ratione, ut minus dolore tenetur voluptate odit amet delectus praesentium necessitatibus esse eum aliquam. Eius dignissimos voluptate mollitia eos, labore perferendis!</p>
+
+       </div>
+   </div>
+   <script type="text/javascript">
+       var button=document.getElementsByTagName('button');
+       var content=document.getElementsByTagName('p');
+        var content2=document.getElementsByTagName('b');
+       for (var i = 0; i < button.length; i++) {
+          button[i].addEventListener("click",function(){
+
+             for (var j = 0; j < content.length; j++) {
+                content[j].style.display="none";
+            }
+            for (var k = 0; k < content.length; k++) {
+                content2[k].style.display="none";
+            }
+            this.nextElementSibling.style.display="block";
+            this.nextElementSibling.nextElementSibling.style.display="block";
+        })}   
+
+    </script>
+</body>
+</html>

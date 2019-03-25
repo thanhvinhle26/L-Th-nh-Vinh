@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css" media="screen">
+	#wrapper
+	{
+		width: 40%;
+		margin: 0 auto;
+		height: 450px;
+		background-color: #b4b4ca;
+	}
+
+	.p8
+	{
+		width: 100%;
+		height: 50px;
+	}
+	.checkBox
+	{
+		width: 20%;
+		height: 50px;
+		float: left;
+	}
+	.text
+	{
+		width: 80%;
+		height: 50px;
+		float: left;
+	}
+	input
+	{
+		margin: 20px;
+	}
+	.p2
+	{
+		width: 100%;
+		height: 50px;
+	}
+	.p2lv2
+	{
+		width: 50%;
+		float: left;
+	}
+	button
+	{
+		margin-left: 35%;
+	}
+</style>
+
+</head>
+<body>
+	<div id="wrapper"">
+		<div class="p8" onmouseover="changeBackGround(this)" onmouseout="changeBackGround2(this)">
+			<div class="checkBox">
+     <input type="checkbox" name="" value="">
+			</div>
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet. </p>
+
+			</div>
+
+		</div>
+		<div class="p8" onmouseover="changeBackGround(this)" onmouseout="changeBackGround2(this)">
+			<div class="checkBox">
+     <input type="checkbox" name="" value="">
+			</div>
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+
+			</div>
+
+		</div>
+		<div class="p8"onmouseover="changeBackGround(this)" onmouseout="changeBackGround2(this)">
+			<div class="checkBox">
+     <input type="checkbox" name="" value="">
+			</div>
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+
+			</div>
+
+		</div>
+		<div class="p8" onmouseover="changeBackGround(this)" onmouseout="changeBackGround2(this)">
+			<div class="checkBox">
+     <input type="checkbox" name="" value="">
+			</div>
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+
+			</div>
+
+		</div>
+		<div class="p8" onmouseover="changeBackGround(this)" onmouseout="changeBackGround2(this)">
+			<div class="checkBox">
+     <input type="checkbox" name="" value="">
+			</div>
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+
+			</div>
+
+		</div>
+		<div class="p8" onmouseover="changeBackGround(this)" onmouseout="changeBackGround2(this)">
+			<div class="checkBox">
+     <input type="checkbox" name="" value="">
+			</div>
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+
+			</div>
+
+		</div>
+		<div class="p8" onmouseover="changeBackGround(this)" onmouseout="changeBackGround2(this)">
+			<div class="checkBox">
+     <input type="checkbox" name="" value="">
+			</div>
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+
+			</div>
+
+		</div>
+		<div class="p8" onmouseover="changeBackGround(this)" onmouseout="changeBackGround2(this)">
+			<div class="checkBox">
+     <input type="checkbox" name="" value="">
+			</div>
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+
+			</div>
+
+		</div>
+		<div class="p2">
+			<div class="p2lv2">
+				<button type="" onclick="checkAll()">Check All</button>
+			</div>
+			<div class="p2lv2">
+				<button type="" onclick="uncheckAll()">Uncheck All</button>
+			</div>
+			
+		</div>
+	</div>
+<script type="text/javascript">
+	function changeBackGround(p8)
+	{
+		p8.style.backgroundColor="green";
+	}
+	function changeBackGround2(p8)
+	{
+		p8.style.backgroundColor="#b4b4ca";
+	}
+	function checkAll()
+	{
+		var check=document.getElementsByTagName('input');
+		for (var i = 0; i < check.length; i++) {
+			check[i].checked=true;
+		}
+	}
+	function checkAll()
+	{
+		var check=document.getElementsByTagName('input');
+		for (var i = 0; i < check.length; i++) {
+			check[i].checked=true;
+		}
+	}
+	function uncheckAll()
+	{
+		var check=document.getElementsByTagName('input');
+		for (var i = 0; i < check.length; i++) {
+			check[i].checked=false;
+		}
+	}
+</script>
+
+</body>
+</html>

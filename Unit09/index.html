@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css" media="screen">
+		span
+		{
+			padding: 20px;
+			border: 1px solid black;
+			margin: 20px;
+
+		}
+		div
+		{
+			margin-top: 20px;
+		}
+	</style>
+	
+
+</head>
+<body>
+	<input type="text" name="" value="" placeholder="loading..." onfocus="changeBg(this)" onblur="resetBg(this)">
+	<select name="" id="opt" >
+		<option value="red">red</option>
+		<option value="orange">orange</option>
+		<option value="yellow">yellow</option>
+		<option value="purple">purple</option>
+		
+	</select>
+	<span id="red" class="color" onmouseover="change(this)" onmouseout="reset()"></span>
+	<span id="black" class="color" onmouseover="change(this)" onmouseout="reset()"></span>
+	<span id="orange" class="color" onmouseover="change(this)" onmouseout="reset()"></span>
+	<span id="yellow" class="color" onmouseover="change(this)" onmouseout="reset()"></span>
+	<span id="purple" class="color" onmouseover="change(this)" onmouseout="reset()"></span>
+
+<div id="text" class="text">
+	The div 1
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, fugit voluptatem sint quis veritatis qui delectus laborum possimus corporis iure vel cum deleniti amet sunt cumque commodi aliquid pariatur quasi.
+</div>
+<script type="text/javascript">
+	var color=document.getElementsByClassName('color');
+	for (var i = 0; i < color.length; i++) {
+		color[i].style.backgroundColor=color[i].id;
+	}
+	function change(color)
+	{
+        var div=document.getElementsByTagName("div");
+        div[0].style.backgroundColor=color.id;
+	}
+	function reset()
+	{
+		var div=document.getElementsByTagName("div");
+		div[0].style.backgroundColor="white";
+	}
+	function changeBg(text)
+	{
+     text.style.backgroundColor="orange";
+	}
+	function resetBg(text)
+	{
+     text.style.backgroundColor="white";
+	}
+	function change2(color)
+	{var opt=document.getElementById("opt");
+		var div=document.getElementsByTagName("div");
+		div[0].style.backgroundColor=opt.value;
+	}
+	var opt=document.getElementById("opt");
+	opt.addEventListener("change",function(){
+		change2()
+	});
+</script>
+</body>
+</html>
