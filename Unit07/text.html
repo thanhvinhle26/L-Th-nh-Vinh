@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<style type="text/css" media="screen">
+
+	#tabs
+	{
+		position: relative;
+		width: 100%;
+	}
+
+	.tab 
+	{
+		width: 60%;
+		margin: 0 auto;
+
+	}
+	.tab div
+	{
+		position: absolute;
+		top: 65px;
+		left: 20%;
+		height: 470px;
+		width: 60%;
+		z-index: -5;
+		display: none;
+		
+	}
+	.tab img
+	{
+		width: 100%;
+		height: 470px;
+	}
+	p
+	{
+		width: 20px;
+		height: 20px;
+		background-color: lavender;
+		float: right;
+		margin :10px;
+		margin-top: 500px;
+		
+	}
+	.active div
+	{
+		display: block !important;
+	}
+#icon
+{
+	width: 100%;
+	height: 100px;
+	position: absolute;
+
+}
+
+</style>
+<script type="text/javascript">
+	function init(){
+		var tabs = document.getElementsByTagName("p");
+		for (var i = 0; i < tabs.length; i++) {
+			tabs[i].addEventListener("click",function(){
+				var active = document.getElementsByClassName("active")[0];
+				active.className="tab";
+				this.parentNode.className="active tab";
+			});
+		}
+	}
+</script>
+</head>
+<body onload="init()">
+	<div id="tabs">
+		<span>
+			<i class="fa fa-arrow-left" aria-hidden="true"></i>
+
+		<div class="active tab">
+			<div >
+				<img src="images/8497653751_17bedcf737_o-450x370.jpg">
+				
+			</div>
+			<p></p>
+			
+		</div>
+		<div class=" tab">
+			<div >
+				<img src="images/2847408095_630f7e6367_o-450x370.jpg">
+				
+			</div>
+			<p></p>
+			
+		</div>
+		<div class=" tab">
+			<div >
+				<img src="images/8301275466_9c1b00e143_k-450x350.jpg">
+				
+			</div>
+			<p></p>
+			
+		</div>
+
+		
+			
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+			
+		
+		</span>
+	</div>
+	
+	
+
+
+</body>
+</html>

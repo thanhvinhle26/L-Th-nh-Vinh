@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css" media="screen">
+		.require
+		{
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		function load()
+		{  
+			var formDangKy=document.getElementsByTagName('form')[0];
+			formDangKy.gioiTinh[1].checked=true;
+				formDangKy.khoaHoc.value="Java core";
+				formDangKy.thoiGian[0].checked=true;
+				formDangKy.thoiGian[3].checked=true;
+				var table=document.getElementsByTagName('table')[0];
+				table.firstElementChild.firstElementChild.style.backgroundColor="orange";
+				table.lastElementChild.lastElementChild.style.backgroundColor="orange";
+			formDangKy.addEventListener("submit",function(){
+
+				if(formDangKy.hoVaTen.value.trim()=="")
+				{
+					alert("Thông tín trống");
+				}
+				if(formDangKy.gioiTinh.value.trim()=="")
+				{
+					alert("Thông tín trống");
+				}
+				if(formDangKy.moTa.value.trim()=="")
+				{
+					alert("Thông tín text trống");
+				}
+			});
+		}
+
+	</script>
+</head>
+<body onload="load()">
+	<form name="formDangKy">
+		<table>
+			<tr align="center" >
+				<td colspan="2">Zent - Form Đăng Ký</td>
+			</tr>
+			<tr>
+				<td>Họ và tên<span class="require">*</span>:</td>
+				<td>
+					<input id="hoVaTen" type="text" name="hoVaTen" value="" placeholder="Gõ họ tên vào đây"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Giới tính<span class="require">*</span>:</td>
+				<td>
+					<input  type="radio" name="gioiTinh" value="nam" placeholder=""/>Nam
+					<input type="radio" name="gioiTinh" value="nu" placeholder=""/>Nữ
+				</td>
+			</tr>
+			<tr>
+				<td>Mật khẩu<span class="require">*</span>:</td>
+				<td>
+					<input type="password" name="matKhau" value="" placeholder=""/>
+				</td>
+			</tr>
+			<tr>
+				<td>Khóa học đăng ký<span class="require">*</span>:</td>
+				<td>
+					<select name="khoaHoc">
+						<option value="" selected>--Lựa chọn--</option>
+						<option value="Java core">Java core</option>
+						<option value="Front end">Front end</option>
+						<option value="Java web">Java web</option>
+						<option value="PHP">PHP</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Thời gian tham gia học<span class="require">*</span>:</td>
+				<td>
+					<input type="checkbox" name="thoiGian" value="2" checked>Thứ 2
+					<input type="checkbox" name="thoiGian" value="3">Thứ 3
+					<input type="checkbox" name="thoiGian" value="4">Thứ 4
+					<br/>
+					<input type="checkbox" name="thoiGian" value="5">Thứ 5
+					<input type="checkbox" name="thoiGian" value="6" checked>Thứ 6
+					<input type="checkbox" name="thoiGian" value="7">Thứ 7
+					<input type="checkbox" name="thoiGian" value="CN">CN
+					<br/>
+				</td>
+			</tr>
+			<tr>
+				<td>Ngày tháng năm sinh<span class="require">*</span>:</td>
+				<td>
+					<input type="date" name="namSinh" value="" placeholder="">
+				</td>
+			</tr>
+			<tr>
+				<td>Upload file:</td>
+				<td>
+					<input type="file" name="file" value="" placeholder="">
+				</td>
+			</tr>
+			<tr>
+				<td>Mô tả<span class="require">*</span>:</td>
+				<td>
+					<textarea name="moTa" cols="50" rows="5"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" name="" value="Gửi thông tin">
+				</td>
+			</tr>
+			<tr align="center" >
+				<td colspan="2">&nbsp;</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
