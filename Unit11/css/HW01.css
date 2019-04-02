@@ -1,0 +1,102 @@
+*
+{
+	margin:0 auto;
+	padding: 0 auto;
+}
+.full
+{
+	width: 100%;
+	margin:0 auto;
+}
+.container
+{
+	width: 70%;
+	margin:0 auto;
+}
+#menu
+{
+	width: 100%;
+	height: 200px;
+	background-color: #ef4040;
+	
+}
+#menu-text
+{
+	text-align: center;
+	color: white;
+	width: 100%;
+	font-size: 30px;
+	height: 100px;
+	line-height: 100px;
+}
+#menu-form
+{
+	height: 100px;
+}
+#menu-input
+{
+	width: 80%;
+	float: left;
+	height: 50px;
+}
+#menu-button
+{
+	width: 20%;
+	float: left;
+	background-color: #7d6868;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+
+}
+#input-text
+{
+	width: 99%;
+	height: 44px;
+	font-size: 20px;
+}
+#list
+{
+	width: 100%;
+	background-color: lavender;
+}
+.list-form
+{
+	width: 100%;
+	height:50px;
+	border-bottom:1px solid white;
+
+}
+.list-form-v
+{
+	width: 5%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	display: none;
+
+	
+}
+.list-form-text
+{
+	width: 90%;
+	height: 50px;
+	line-height: 50px;	
+	float: left;
+
+
+}
+.list-form-text p
+{
+	padding-left: 100px;
+}
+.list-form-xoa
+{
+	width: 5%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/HW01.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body>
+	<div id="wrapper" class="full">
+		<div id="bao" class="container">
+			<div id="menu">
+				<div id="menu-text">
+					<p>My to do list</p>
+					
+				</div>
+				<div id="menu-form" class="container">
+					<div id="menu-input">
+						<input type="text" name="" value="" placeholder="Tilte..." id="input-text">
+						
+					</div >
+					<div id="menu-button">
+						<p>Add</p>
+					</div >
+				</div>
+				
+			</div>
+			<div id="list">
+				<div class="list-form">
+					<div class="list-form-v">
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</div>
+					<div class="list-form-text">
+						<p>Hit the gym</p>
+					</div>
+					<div class="list-form-xoa">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</div>
+					
+				</div>
+				<div class="list-form">
+					<div class="list-form-v">
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</div>
+					<div class="list-form-text">
+						<p>Pay bills</p>
+					</div>
+					<div class="list-form-xoa">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</div>
+					
+				</div>
+				<div class="list-form">
+					<div class="list-form-v">
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</div>
+					<div class="list-form-text">
+						<p>Meet George</p>
+					</div>
+					<div class="list-form-xoa">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</div>
+					
+				</div>
+				<div class="list-form">
+					<div class="list-form-v">
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</div>
+					<div class="list-form-text">
+						<p>Buy eggs</p>
+					</div>
+					<div class="list-form-xoa">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</div>
+					
+				</div>
+				<div class="list-form">
+					<div class="list-form-v">
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</div>
+					<div class="list-form-text">
+						<p>Read a book</p>
+					</div>
+					<div class="list-form-xoa">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</div>
+					
+				</div>
+				<div class="list-form">
+					<div class="list-form-v">
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</div>
+					<div class="list-form-text">
+						<p>Organize ofice</p>
+					</div>
+					<div class="list-form-xoa">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){   
+			
+			$(document).on("click",".list-form", function(){
+				$(".list-form").css("background-color","lavender");
+				$(".list-form").css("color","black");
+				$(this).css("background-color","#7d6868");
+				$(this).css("color","white");
+				$(this).find(".list-form-v").css("display","block");
+				$(this).find(".list-form-text").css("text-decoration","line-through");
+			});
+			$(document).on("click",".list-form-xoa", function(){
+				$(this).parent().remove();
+			});
+			$("#menu-button").click(function(){
+				if($("input").val()=="")
+				{
+					alert("Nhập vào việc làm trước khi thêm");
+				}
+				else{   
+					var text=$("input").val();
+					$("#list").append(`<div class="list-form">
+						<div class="list-form-v">
+						<i class="fa fa-check" aria-hidden="true"></i>
+						</div>
+						<div class="list-form-text">
+						<p>`+text+`</p>
+						</div>
+						<div class="list-form-xoa">
+						<i class="fa fa-times" aria-hidden="true"></i>
+						</div>
+						
+						</div>`);
+					
+				}
+			})
+
+		})
+	</script>
+
+</body>
+</html>

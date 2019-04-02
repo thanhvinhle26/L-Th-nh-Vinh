@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css" media="screen">
+	.color{
+		padding:20px;
+		border:1px solid black;
+		margin:20px;
+	}
+	div{
+		margin-top: 30px;
+	}
+</style>
+
+</head>
+<body>
+	<span id="red" class="color"></span>
+	<span id="green" class="color"></span>
+	<span id="blue" class="color"></span>
+	<span id="yellow" class="color"></span>
+	<span id="purple" class="color"></span>
+	<span id="orange" class="color"></span>
+	<span id="black" class="color"></span>
+	<div>
+		lorem
+	</div>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			var colors = $(".color");
+			colors.each(function(){
+				$(this).css("background-color",$(this).attr("id"));
+
+
+			})
+			colors.mouseenter(function()
+			{
+				$("div").css("background-color",$(this).attr("id"));
+
+
+			})
+			colors.mouseleave(function()
+			{
+				$("div").css("background-color","white");
+
+
+			})
+
+
+		})
+
+
+
+	</script>
+</body>
+</html>
