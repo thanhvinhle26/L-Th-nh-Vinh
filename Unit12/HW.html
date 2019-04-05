@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(function()
+		{
+			$(".active").parent().find("#tab-form").show();
+			
+
+			$("#form1").validate({
+				rules: {
+					
+
+					userName: {
+						required: true,
+						minlength: 2,
+					},
+					
+					password: {
+						required: true,
+						minlength: 3,
+					},
+					confirm: {
+						required: true,
+						minlength: 3,
+						equalTo:"#password",
+					},
+
+					
+				},
+				messages: {
+					
+
+					userName: {
+						required: "Vui lòng nhập họ tên",
+						minlength: "Họ tên quá ngắn"
+					},
+					password: {
+						required: "Vui lòng nhập mật khẩu",
+						minlength: "Mật khẩu quá ngắn",
+					},
+					confirm: {
+						required: "Vui lòng nhập lại mật khẩu",
+						minlength: "Mật khẩu quá ngắn",
+						equalTo:"Mật khẩu nhập lại chưa đúng",
+					},
+				}
+
+
+
+
+
+			});
+			$("#form2").validate({
+				rules: {
+					
+
+					name: {
+						required: true,
+						minlength: 2,
+					},
+					surname: {
+						required: true,
+						minlength: 2,
+					},
+					email: {
+						required: true,
+						
+					},
+					address: {
+						required: true,
+						
+					},
+					age: {
+						required: true,
+						
+					},
+
+					
+				},
+				messages: {
+					
+
+					name: {
+						required: "Vui lòng điền họ",
+						minlength: "Họ quá ngắn",
+					},
+					surname: {
+						required: "Vui lòng điền tên",
+						minlength: "Tên quá ngắn",
+					},
+					email: {
+						required: "Vui lòng điền email",
+						
+					},
+					address: {
+						required: "Vui lòng điền địa chỉ",
+						
+					},
+					age: {
+						required: "Vui lòng điền tuổi",
+						
+					},
+				}
+
+
+
+
+
+			});
+			$("#form3").validate({
+				rules: {
+					
+
+					acceptTerms: {
+						required: true,
+						
+					},
+					
+
+					
+				},
+				messages: {
+					
+
+					
+					acceptTerms: {
+						required: "Vui lòng tích vào ô trên",
+						
+					},
+				}
+
+
+
+
+
+			});
+			$(".tab").click(function()
+				{   $("#form1").validate();
+				$("#form2").validate();
+
+				if($("#form1").valid()&&$("#form2").valid())
+				{
+					$(".tab").removeClass('active');
+					$(this).addClass('active');
+					$(".tab").parent().find("#tab-form").hide(1000);
+					$(this).parent().find("#tab-form").show(1000);
+				}
+
+
+
+
+			});
+			$("#check").click(function(){
+				$("#form1").validate();
+				if ($("#form1").valid()) {
+					$(".tab").removeClass('active');
+					$(this).parent().parent().parent().next().find(".tab").addClass('active');
+					$(".tab").parent().find("#tab-form").hide(1000);
+					$(this).parent().parent().parent().next().find("#tab-form").show(1000);
+					$(this).parent().parent().parent().find(".tab").css("background-color","#95c8ec");
+					
+				}
+
+
+			})
+			$("#check3").click(function(){
+				$("#form3").validate();
+				if ($("#form3").valid()) {
+					alert("Đăng kí thành công");
+					$(this).parent().parent().parent().find(".tab").css("background-color","#95c8ec");
+				}
+
+
+			})
+			$("#previous").click(function(){
+				
+				
+					$(".tab").removeClass('active');
+					$(this).parent().parent().parent().prev().find(".tab").addClass('active');
+					$(".tab").parent().find("#tab-form").hide(1000);
+					$(this).parent().parent().parent().prev().find("#tab-form").show(1000);
+			})
+			$("#check2").click(function(){
+				$("#form2").validate();
+				if ($("#form2").valid()) {
+					if($("#form2").find("#age").val()<18)
+					{
+					$(".tab").removeClass('active');
+					$(this).parent().parent().parent().next().find(".tab").addClass('active');
+					$(".tab").parent().find("#tab-form").hide(1000);
+					$(this).parent().parent().parent().next().find("#tab-form").show(1000);
+					$(this).parent().parent().parent().find(".tab").css("background-color","#95c8ec");
+				}
+				else {
+					$(".tab").removeClass('active');
+					$(this).parent().parent().parent().next().next().find(".tab").addClass('active');
+					$(".tab").parent().find("#tab-form").hide(1000);
+					$(this).parent().parent().parent().next().next().find("#tab-form").show(1000);
+					$(this).parent().parent().parent().find(".tab").css("background-color","#95c8ec");
+					$(this).parent().parent().parent().next().find(".tab").css("background-color","#95c8ec");
+					
+				}
+					
+				}
+
+
+			})
+
+
+
+
+
+		})
+		
+
+	</script>
+
+</head>
+<body >
+	<div id="wrapper" class="container">
+		<div id="topmenu">
+			<div id="topmenu-left">
+				<p>jQuery Steps</p>
+				
+			</div>
+			<div id="topmenu-right">
+				<ul>
+					<li>
+						<a href="#" title="">Getting Started</a>
+					</li>
+					<li>
+						<a href="#" title="" >Examples</a>
+					</li>
+					<li>
+						<a href="#" title="">Documentation</a>
+					</li>
+					<li>
+						<a href="#" title="">Bootgrid</a>
+						<span id="badge">New</span>
+					</li>
+					<li>
+						<a href="#" title="">Blog</a>
+					</li>
+					<li>
+						<a href="#" title="">GitHub</a>
+					</li>
+					<li>
+						<a href="#" title="">About</a>
+					</li>
+				</ul>
+				
+			</div>
+			
+		</div>
+		<div id="content">
+			<div id="contentmenu-left">
+				<ul>
+					<li>Basic Example</li>
+					<li>Basic Form Example</li>
+					<li class="active">Advanced Form Example</li>
+					<li>Dynamic Manipulation Example</li>
+					<li>Tabs Example</li>
+					<li>Vertical Step Example</li>
+					<li>Async Content Loading Example</li>					
+					<li>Embedded Content Example</li>
+				</ul>
+				
+			</div>
+			<div id="content-right">
+				<p>Advanced Form Example</p>
+				<div id="tabslist">
+					<div id="tab">
+						<p class="tab active"><span style="font-size: 30px">1.</span>Account</p>
+						<div id="tab-form">
+							<form  id="form1">
+								
+								<p style="font-size: 30px;padding-left: 20px">Account Information
+								</p>
+								<br>
+
+								<label for="userName" style="padding-left: 20px;">User name</label>
+								<br><br>
+								<input id="userName" name="userName" type="text" class="required"
+								style="margin-left: 20px;width: 220px;height: 30px;">
+								<br><br>
+								<label for="password" style="padding-left: 20px;">Password</label>
+								<br><br>
+								<input style="margin-left: 20px;width: 220px;height: 30px;" id="password" name="password" type="text" class="required">
+								<br><br>
+								<label for="confirm" style="padding-left: 20px;">Confirm Password</label>
+								<br><br>
+								<input id="confirm" name="confirm" type="text" class="required" style="margin-left: 20px;width: 220px;height: 30px;">
+								<br><br>
+								<p style="padding-left: 20px;font-size: 15px">(*) Mandatory</p>
+								<input type="button" name="" value="Next" style="padding: 9px 20px;float: right;margin-right: 20px;border-radius: 5px;margin-top: 250px;background-color: #2184be " id="check">
+								<input type="button" name="" value="Previous" style="padding: 9px 20px;float: right;margin-right: 20px;border-radius: 5px;margin-top: 250px" >
+								
+
+							</form>
+							
+						</div> 
+						
+					</div>
+					<div id="tab">
+						<p class="tab"><span style="font-size: 30px">2.</span>Profile</p>
+						<div id="tab-form">
+							<form id="form2">
+								<p style="font-size: 30px;padding-left: 20px">Profile Information
+								</p>
+								<br>
+
+								<label for="name" style="padding-left: 20px;">First name *</label>
+								<br><br>
+								<input id="name" name="name" type="text" class="required" style="margin-left: 20px;width: 220px;height: 30px;">
+								<br><br>
+								<label for="surname" style="padding-left: 20px;">Last name *</label>
+								<br><br>
+								<input id="surname" name="surname" type="text" class="required" style="margin-left: 20px;width: 220px;height: 30px;">
+								<br><br>
+								<label for="email" style="padding-left: 20px;">Email *</label>
+								<br><br>
+								<input id="email" name="email" type="text" class="required email" style="margin-left: 20px;width: 220px;height: 30px;">
+								<br><br>
+								<label for="address" style="padding-left: 20px;">Address</label>
+								<br><br>
+								<input id="address" name="address" type="text" style="margin-left: 20px;width: 220px;height: 30px;">
+								<br><br>
+								<label for="age" style="padding-left: 20px;">Age (The warning step will show up if age is less than 18) *</label>
+								<br><br>
+								<input id="age" name="age" type="text" class="required number" style="margin-left: 20px;width: 220px;height: 30px;">
+								<br><br>
+								<p style="padding-left: 20px;font-size: 15px">(*) Mandatory</p>
+
+								<input type="button" name="" value="Next" style="padding: 9px 20px;float: right;margin-right: 20px;border-radius: 5px;margin-top: 70px;background-color: #2184be " id="check2">
+								<input type="button" name="" value="Previous" style="padding: 9px 20px;float: right;margin-right: 20px;border-radius: 5px;margin-top: 70px;background-color: #2184be" id="previous">
+								
+							</form>
+
+						</div>  
+
+					</div>
+					<div id="tab">
+						<p class="tab"><span style="font-size: 30px">3.</span>Warning</p>
+						<div id="tab-form">
+							<p style="font-size: 30px;padding-left: 20px">You are too young
+							</p>
+							<p style="font-size: 20px;padding-top: 30px;padding-left: 20px">Please go away</p>
+
+						</div>  
+
+					</div>
+					<div id="tab">
+						<p class="tab"><span style="font-size: 30px">4.</span>Finish</p>
+						<div id="tab-form">
+							<form id="form3">
+								<p style="font-size: 30px;padding-left: 20px">Terms and Conditions
+								</p>
+								<br>
+								<label for="acceptTerms" style="padding-left: 20px">I agree with the Terms and Conditions.</label>
+								<input id="acceptTerms" name="acceptTerms" type="checkbox" class="required" style="margin-left: 20px;"> 
+								<input type="button" name="" value="Finish" style="padding: 9px 20px;float: right;margin-right: 20px;border-radius: 5px;margin-top: 550px;background-color: #2184be" id="check3">
+								<!-- <input type="button" name="" value="Previous" style="padding: 9px 20px;float: right;margin-right: 20px;border-radius: 5px;margin-top: 550px;background-color: #2184be" id="previous"> -->
+							</form> 
+
+						</div> 
+
+					</div>
+
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

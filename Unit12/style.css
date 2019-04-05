@@ -1,0 +1,178 @@
+*
+{
+	margin:0 auto;
+	padding: 0 auto;
+}
+li
+{
+	list-style-type: none;
+	
+}
+a
+{
+	text-decoration: none;
+	color: white;
+}
+body
+{
+	background-color: lavender;
+}
+#wrapper
+{
+	font-family: 'Roboto', sans-serif;
+}
+.full
+{
+	width: 100%;
+	margin: 0 auto;
+}
+.container
+{
+	width: 80%;
+	margin: 0 auto;
+}
+#topmenu
+{
+	width: 100%;
+	height: 64px;
+	background-color: #2184be;
+}
+#topmenu-left
+{
+	width: 30%;
+	float: left;
+	color: white;
+	height: 64px;
+	line-height: 64px;
+	
+}
+#topmenu-left>p
+{
+	padding-left: 20px;
+	font-size: 25px;
+}
+#topmenu-right
+{
+	width: 70%;
+	float: left;
+	height: 64px;
+	line-height: 64px;
+}
+#topmenu-right li
+{
+	float: left;
+	width: 20%;
+	text-align: center;
+	font-size: 15px;
+}
+#badge
+{
+	width: 44px;
+	height: 18px;
+	background-color: #b94a48;
+	text-align: center;
+	color: white;
+	border-radius: 2px;
+}
+#content
+{
+	width: 100%;
+	height: 900px;
+	background-color: white;
+	position: relative;
+}
+#contentmenu-left
+{
+	width: 30%;
+	float: left;
+	height: 600px;
+}
+#contentmenu-left ul
+{
+	position: absolute;
+	top: 50px;
+	left: -40px;
+	width:25%;
+
+}
+
+#contentmenu-left li
+{
+	width: 100%;
+	margin: 0 auto;
+	background-color: lavender;
+	color: #2184be;
+	height: 41px;
+	line-height: 41px;
+	padding-left: 20px;
+}
+#content-right
+{
+	width: 70%;
+	float: left;
+	height: 600px;
+}
+#content-right p
+{
+	font-size: 30px;
+}
+.active
+{
+	background-color: #2184be !important;
+	color: white !important;
+}
+#tabslist
+{
+	width: 90%;	
+	position: relative;
+
+}
+#tab
+{
+	
+	float: left;
+	
+}
+#tab>p
+{
+	
+	height: 30px;
+	width: 100px;
+	background-color: lavender;
+	border-radius: 10px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 20px;
+	margin: 0px 10px;
+	padding: 10px 20px;
+	margin: 20px 10px;
+	padding: 10px 20px;
+
+	
+	
+}
+#tab-form
+{
+	width: 100%;
+	height: 600px;
+	background-color: lavender;
+	margin-top: 20px;
+	position: absolute;
+	color: #193954;
+	left: -38px;
+	display: none;
+
+}
+#content-button
+{
+	width: 50%;
+	margin-top: 20px;
+	position: absolute;
+	top: 760px;
+
+
+}
+label.error
+{
+	color: red;
+}
