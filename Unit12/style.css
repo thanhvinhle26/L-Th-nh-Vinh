@@ -163,15 +163,7 @@ body
 	display: none;
 
 }
-#content-button
-{
-	width: 50%;
-	margin-top: 20px;
-	position: absolute;
-	top: 760px;
 
-
-}
 label.error
 {
 	color: red;

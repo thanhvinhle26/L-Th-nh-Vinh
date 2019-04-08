@@ -6,6 +6,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+	<script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
 	<script type="text/javascript">
 		$(function()
 		{
@@ -172,7 +174,20 @@
 			$("#check3").click(function(){
 				$("#form3").validate();
 				if ($("#form3").valid()) {
-					alert("Đăng kí thành công");
+					swal({
+						title: "Đăng kí thành công",
+						// text: "You will not be able to recover this imaginary file!",
+						type: "success",
+						showCancelButton: true,
+						confirmButtonColor: '#DD6B55',
+						confirmButtonText: 'OK',
+						cancelButtonText: "THOÁT",
+						closeOnConfirm: false,
+						closeOnCancel: false
+
+
+
+					});
 					$(this).parent().parent().parent().find(".tab").css("background-color","#95c8ec");
 				}
 
@@ -181,31 +196,31 @@
 			$("#previous").click(function(){
 				
 				
-					$(".tab").removeClass('active');
-					$(this).parent().parent().parent().prev().find(".tab").addClass('active');
-					$(".tab").parent().find("#tab-form").hide(1000);
-					$(this).parent().parent().parent().prev().find("#tab-form").show(1000);
+				$(".tab").removeClass('active');
+				$(this).parent().parent().parent().prev().find(".tab").addClass('active');
+				$(".tab").parent().find("#tab-form").hide(1000);
+				$(this).parent().parent().parent().prev().find("#tab-form").show(1000);
 			})
 			$("#check2").click(function(){
 				$("#form2").validate();
 				if ($("#form2").valid()) {
 					if($("#form2").find("#age").val()<18)
 					{
-					$(".tab").removeClass('active');
-					$(this).parent().parent().parent().next().find(".tab").addClass('active');
-					$(".tab").parent().find("#tab-form").hide(1000);
-					$(this).parent().parent().parent().next().find("#tab-form").show(1000);
-					$(this).parent().parent().parent().find(".tab").css("background-color","#95c8ec");
-				}
-				else {
-					$(".tab").removeClass('active');
-					$(this).parent().parent().parent().next().next().find(".tab").addClass('active');
-					$(".tab").parent().find("#tab-form").hide(1000);
-					$(this).parent().parent().parent().next().next().find("#tab-form").show(1000);
-					$(this).parent().parent().parent().find(".tab").css("background-color","#95c8ec");
-					$(this).parent().parent().parent().next().find(".tab").css("background-color","#95c8ec");
-					
-				}
+						$(".tab").removeClass('active');
+						$(this).parent().parent().parent().next().find(".tab").addClass('active');
+						$(".tab").parent().find("#tab-form").hide(1000);
+						$(this).parent().parent().parent().next().find("#tab-form").show(1000);
+						$(this).parent().parent().parent().find(".tab").css("background-color","#95c8ec");
+					}
+					else {
+						$(".tab").removeClass('active');
+						$(this).parent().parent().parent().next().next().find(".tab").addClass('active');
+						$(".tab").parent().find("#tab-form").hide(1000);
+						$(this).parent().parent().parent().next().next().find("#tab-form").show(1000);
+						$(this).parent().parent().parent().find(".tab").css("background-color","#95c8ec");
+						$(this).parent().parent().parent().next().find(".tab").css("background-color","#95c8ec");
+
+					}
 					
 				}
 
@@ -217,7 +232,7 @@
 
 
 		})
-		
+
 
 	</script>
 
