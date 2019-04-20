@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/HW.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lightslider.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/jssor.slider-27.5.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.filterizr.min.js"></script>
+	<script type="text/javascript" src="js/wow.js"></script>
+	<script type="text/javascript" src="js/jquery.filterizr-with-jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+	<script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+	<link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+	<script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
+	<script type="text/javascript" src="js/controls.js"></script>
+	<script>
+		
+		
+		$(function() {
+
+			new WOW().init();
+			
+			
+			var f = $('.filtr-container').filterizr({ controlsSelector: '.fltr-controls' });
+			window.filterizr = f;
+
+			$('button').click(function() {
+				$('button').removeClass('active');
+				$(this).addClass('active');
+			});
+			$("#banner3-button").find("button").click(function(){
+				$("#banner3-button").find("button").removeClass("active2");
+				$(this).addClass("active2");
+				$("#banner3-image").css("display","none");
+				$("#banner3-text").css("display","none");
+				setTimeout(function(){
+					$("#banner3-image").css("display","block");
+					$("#banner3-text").css("display","block");
+
+				}, 50);
+				
+				// $("#banner3-button").find("button").index
+				//  var t=$(this).index();
+				
+				//   $("#banner3-image").hide(1000);
+				//   $("#banner3-text").hide(1000);
+				//  // $(`.ong:nth-child(`+t+`)`).find("#banner3-image").show(1000);
+				//  // $(`.ong:nth-child(`+t+`)`).find("#banner3-text").show(1000);
+				//  $(".ong").children().eq(t).find("#banner3-image").show(1000);
+				//   $(".ong").children().eq(t).find("#banner3-text").show(1000);
+
+
+
+			})
+			$(".active3").css("display","block");
+			$(".active4").css("display","block");
+			$("#icon2").click(function(){
+				if($(".active3").next().attr("class")!=undefined){
+					$(".active3").next().addClass("active3");
+					$(".active3").prev().removeClass("active3");
+					$(".box").css("display","none");
+					$(".active3").css("display","block");
+					
+				}
+				else {
+					$("#slideshow1").children().children().children().eq(3).removeClass("active3");
+					$("#slideshow1").children().children().children().eq(0).addClass("active3");
+					$(".box").css("display","none");
+					$(".active3").css("display","block");
+				}
+				
+
+
+			})
+			$("#icon22").click(function(){
+				if($(".active4").next().attr("class")!=undefined){
+					$(".active4").next().addClass("active4");
+					$(".active4").prev().removeClass("active4");
+					$(".box2").css("display","none");
+					$(".active4").css("display","block");
+					
+				}
+				else {
+					$("#slideshow2").children().children().children().eq(3).removeClass("active4");
+					$("#slideshow2").children().children().children().eq(0).addClass("active4");
+					$(".box2").css("display","none");
+					$(".active4").css("display","block");
+				}
+				
+
+
+			})
+			$("#icon1").click(function(){
+				if($(".active3").prev().attr("class")!=undefined){
+					$(".active3").prev().addClass("active3");
+					$(".active3").next().removeClass("active3");
+					$(".box").css("display","none");
+					$(".active3").css("display","block");
+					
+				}
+				else {
+					$("#slideshow1").children().children().children().eq(0).removeClass("active3");
+					$("#slideshow1").children().children().children().eq(3).addClass("active3");
+					$(".box").css("display","none");
+					$(".active3").css("display","block");
+				}
+				
+
+
+			})
+			$("#icon12").click(function(){
+				if($(".active4").prev().attr("class")!=undefined){
+					$(".active4").prev().addClass("active4");
+					$(".active4").next().removeClass("active4");
+					$(".box2").css("display","none");
+					$(".active4").css("display","block");
+					
+				}
+				else {
+					$("#slideshow2").children().children().children().eq(0).removeClass("active4");
+					$("#slideshow2").children().children().children().eq(3).addClass("active4");
+					$(".box2").css("display","none");
+					$(".active4").css("display","block");
+				}
+				
+
+
+			})
+			$(".box").find("i").click(function(){
+				$("#slideshow-parent").css("display","none");
+				$("#slide-shadow").css("display","none");
+
+
+
+			})
+			$(".hover1-child").click(function(){
+				$("#slideshow-parent").css("display","block");
+				$("#slide-shadow").css("display","block");
+
+
+
+			})
+			$(".box2").find("i").click(function(){
+				$("#slideshow-parent2").css("display","none");
+				$("#slide-shadow2").css("display","none");
+
+
+
+			})
+			$(".hover2-child").click(function(){
+				$("#slideshow-parent2").css("display","block");
+				$("#slide-shadow2").css("display","block");
+
+
+
+			})
+			var jssor_1_SlideshowTransitions = [
+			{$Duration:800,$Opacity:2}
+			];
+
+			var jssor_1_options = {
+				$AutoPlay: 1,
+				$SlideshowOptions: {
+					$Class: $JssorSlideshowRunner$,
+					$Transitions: jssor_1_SlideshowTransitions,
+					$TransitionsOrder: 1
+				},
+				$ArrowNavigatorOptions: {
+					$Class: $JssorArrowNavigator$
+				},
+				$BulletNavigatorOptions: {
+					$Class: $JssorBulletNavigator$
+				}
+			};
+
+			var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+			/*#region responsive code begin*/
+
+			var MAX_WIDTH = 980;
+
+			function ScaleSlider() {
+				var containerElement = jssor_1_slider.$Elmt.parentNode;
+				var containerWidth = containerElement.clientWidth;
+
+				if (containerWidth) {
+
+					var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+					jssor_1_slider.$ScaleWidth(expectedWidth);
+				}
+				else {
+					window.setTimeout(ScaleSlider, 30);
+				}
+			}
+
+			ScaleSlider();
+
+			$(window).bind("load", ScaleSlider);
+			$(window).bind("resize", ScaleSlider);
+			$(window).bind("orientationchange", ScaleSlider);
+			/*#endregion responsive code end*/
+			$(".package").find("button").click(function(){
+				$(".package").find("button").removeClass("active2");
+				$(this).addClass("active2");
+				$("#tab-form").css("display","block");
+				$("#slide-shadow").css("display","block");
+
+
+			})
+			$("#tab-form").find("i").click(function(){
+				$("#tab-form").css("display","none");
+				$("#slide-shadow").css("display","none");
+
+
+			})
+			$("#tab-form").find(".btn-secondary").click(function(){
+				$("#tab-form").css("display","none");
+				$("#slide-shadow").css("display","none");
+
+
+			})
+			$("#form1").validate({
+				rules: {
+					
+
+					name: {
+						required: true,
+						minlength: 2,
+					},
+					surname: {
+						required: true,
+						minlength: 2,
+					},
+					email: {
+						required: true,
+						
+					},
+					address: {
+						required: true,
+						
+					},
+					age: {
+						required: true,
+						
+					},
+
+					
+				},
+				messages: {
+					
+
+					name: {
+						required: "Vui lòng điền họ",
+						minlength: "Họ quá ngắn",
+					},
+					surname: {
+						required: "Vui lòng điền tên",
+						minlength: "Tên quá ngắn",
+					},
+					email: {
+						required: "Vui lòng điền email",
+						
+					},
+					address: {
+						required: "Vui lòng điền địa chỉ",
+						
+					},
+					age: {
+						required: "Vui lòng điền tuổi",
+						
+					},
+				}
+
+
+
+
+
+
+			});
+			$("#check1").click(function(){
+				$("#form1").validate();
+				if ($("#form1").valid()) {
+					swal({
+						title: "Đăng kí thành công",
+						// text: "You will not be able to recover this imaginary file!",
+						type: "success",
+						showCancelButton: true,
+						confirmButtonColor: '#DD6B55',
+						confirmButtonText: 'OK',
+						cancelButtonText: "THOÁT",
+						closeOnConfirm: false,
+						closeOnCancel: false
+
+
+
+					});
+					$("#tab-form").css("display","none");
+					$("#slide-shadow").css("display","none");
+					
+				}
+
+
+			})
+			$("#header").find("li").click(function(){
+				$("#header").find("li").removeClass("header-active");
+				$(this).addClass("header-active");
+			})
+			$('.counter').counterUp({
+			delay: 10,
+			time: 100000
+		});
+			$("#home").click(function(){
+				$("#wrapper1").css("display","block");
+				$("#wrapper2").css("display","none");
+			})
+			$("#gallery").click(function(){
+				$("#wrapper1").css("display","none");
+				$("#wrapper2").css("display","block");
+			})
+
+
+		});
+
+
+	</script>  
+
+</head>
+<body>
+	<div id="header" class="container-fluid">
+		<div class="row" class="container">
+			<div class="col-xl-2 col-lg-2 col-md-2 ">
+				
+				
+			</div>
+			<div class="col-xl-7 col-lg-7 col-md-7 ">
+				<ul>
+					<li class="header-active" id="home">HOME</li>
+					<li>ABOUT</li>
+					<li id="gallery">GALLERY</li>
+					<li>PAGE</li>
+					<li>BLOG</li>
+					<li>CONTACT</li>
+				</ul>
+				
+			</div>
+			<div class="col-xl-3 col-lg-3 col-md-3 ">
+				<button type="" class="col-xl-8 col-lg-8 col-md-8 ">ACCESS</button>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	<div id="wrapper1">
+		<div class="container-fluid" id="banner1">
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6" id="banner1-display">
+					<img src="images/home-left.png"> 
+
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+					<h1>FOR ALL STUDENT TRY YOUR BEST PAST YOUR CHALLENGE</h1>
+					<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ratione aliquam, repellat totam unde maxime voluptatem cum necessitatibus pariatur.</h6>
+					<ul>
+						<li style="width: 40px;height: 40px;background-color: lavender;border-radius: 50%;"><p style="width: 30px;height: 30px;background-image: linear-gradient(to right, #08a0f2, #00b6f6, #00caf5, #42dcf1, #74eded);text-align: center;line-height: 30px;border-radius: 50%;margin-top: 5px"><i class="fa fa-play" aria-hidden="true"></i></p></li>
+						<li style="color: white;padding-left: 20px">WATCH THE VIDEO</li>
+					</ul>
+				</div>
+			</div>
+
+
+
+		</div>
+		<div class="container col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" id="banner2">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-xl-12 col-lg-12 col-md-12">
+						<h1>ABOUT US</h1>
+						<hr size="5px" color="#16D6CE" width="50px"  align="left">
+						<h2>WE BELIEVE THAT INTERIOR BEAUTY LASTS LONG</h2>
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nam necessitatibus, tenetur magnam beatae excepturi fuga ab culpa impedit corrupti.</h3>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" style="margin:0">
+							<button type=""  id="short-button" style="width: 50%">LEARN MORE</button>
+						</div>
+						
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6">
+
+					</div>
+
+				</div>
+
+			</div>
+			<div class="container" id="banner2-display">
+				<div class="row">
+					<div id="dot1" class="col-xl-6 col-lg-6 col-md-6">
+
+					</div>
+					<div id="dot2" class="col-xl-6 col-lg-6 col-md-6">
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+		<div class="container" id="filter">
+
+			<div class="row">
+
+				<ul class="simplefilter">
+
+					<li class="fltr-controls active" data-filter="all">All</li>
+					<li class="fltr-controls" data-filter="1">Cityscape</li>
+					<li class="fltr-controls" data-filter="2">Landscape</li>
+					<li class="fltr-controls" data-filter="3">Industrial</li>
+					<li class="fltr-controls" data-filter="4">Daylight</li>
+					<li class="fltr-controls" data-filter="5">Nightscape</li>
+				</ul>
+			</div>
+
+			<div class="row push-down">
+				<div class="filtr-container">
+					<div class="col-xs-6 col-sm-4 col-md-3 col-4 filtr-item" data-category="1, 5" data-sort="Busy streets">
+						<img class="img-responsive" src="images/tran1.jpg" alt="sample image">
+						<span class="item-desc">BUSY STREETS</span>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-4 filtr-item" data-category="2, 5" data-sort="Luminous night">
+						<img class="img-responsive" src="images/tran2.jpg" alt="sample image">
+						<span class="item-desc">LUMINOUS NIGHT</span>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-4 filtr-item" data-category="1, 4" data-sort="City wonders">
+						<img class="img-responsive" src="images/tran3.jpg" alt="sample image">
+						<span class="item-desc">CITY WONDER</span>
+					</div>        
+					<div class="col-xs-6 col-sm-4 col-md-3 col-4 filtr-item" data-category="3, 4" data-sort="Industrial site">
+						<img class="img-responsive" src="images/tran4.jpg" alt="sample image">
+						<span class="item-desc">INDUSTRIAL SITE</span>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-4 filtr-item" data-category="2, 4" data-sort="Peaceful lake">
+						<img class="img-responsive" src="images/tran5.jpg" alt="sample image">
+						<span class="item-desc">PEACEFUL LAKE</span>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-4 filtr-item" data-category="1, 5" data-sort="City lights">
+						<img class="img-responsive" src="images/tran6.jpg" alt="sample image">
+						<span class="item-desc">CITY LIGHTS</span>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-4 filtr-item" data-category="2, 4" data-sort="Dreamhouse">
+						<img class="img-responsive" src="images/tran7.jpg" alt="sample image">
+						<span class="item-desc">DREAMHOUSE</span>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-4 filtr-item" data-category="2, 4" data-sort="Dreamhouse">
+						<img class="img-responsive" src="images/tran8.jpg" alt="sample image">
+						<span class="item-desc">RESTLESS MACHINES</span>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<div class="container" id="banner3">
+			
+				<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10" id="banner3-button">
+					<div class="row " >
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 ">
+							<button type="" class="active2 " id="banner3-button-1">Live Streaming</button>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 ">
+							<button type="" id="banner3-button-2">Upcoming Challenges</button>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 ">
+							<button type="" id="banner3-button-3" >Recent Famous Games</button>
+					</div>
+						</div>
+					
+					
+					
+				</div>
+
+
+			
+			<div class="ong">
+				<div class="row " id="ong1" >
+					<div class="col-xl-5 col-lg-5 col-md-5" id="banner3-image">
+
+					</div>
+					<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12" id="banner3-text">
+						<h1>ABOUT US</h1>
+						<hr size="5px" color="#16D6CE" width="50px" align="left">
+						<h2>WE BELIEVE THAT INTERIOR BEAUTY LASTS LONG</h2>
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nam necessitatibus, tenetur magnam beatae excepturi fuga ab culpa impedit corrupti.</h3>
+						<button type="" class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="short-button">LEARN MORE</button>
+					</div>
+
+				</div>
+		<!-- <div class="row " >
+			<div class="col-xl-5" id="banner3-image">
+				
+			</div>
+			<div class="col-xl-5" id="banner3-text">
+				<h1>ABOUT US</h1>
+				<hr size="5px" color="#16D6CE" width="50px" align="left">
+				<h2>WE BELIEVE THAT INTERIOR BEAUTY LASTS LONG</h2>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nam necessitatibus, tenetur magnam beatae excepturi fuga ab culpa impedit corrupti.</h3>
+				<button type="" class="col-xl-8" id="short-button">LEARN MORE</button>
+			</div>
+			
+		</div>
+		<div class="row" >
+			<div class="col-xl-5" id="banner3-image">
+				
+			</div>
+			<div class="col-xl-5" id="banner3-text">
+				<h1>ABOUT US</h1>
+				<hr size="5px" color="#16D6CE" width="50px" align="left">
+				<h2>WE BELIEVE THAT INTERIOR BEAUTY LASTS LONG</h2>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nam necessitatibus, tenetur magnam beatae excepturi fuga ab culpa impedit corrupti.</h3>
+				<button type="" class="col-xl-8" id="short-button">LEARN MORE</button>
+			</div>
+			
+		</div> -->
+	</div>
+
+
+
+</div>
+<div class="container" id="screen">
+	<div class="row">
+		<p>Screen Gallerys</p>
+
+	</div>
+
+</div>
+<div class="container" id="hover1">
+	<div class="row">
+		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 hover1-child" ">
+					<img src="images/blog_img2.png">
+					<span class="middle"><i class="fa fa-eye"></i></span>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 hover1-child">
+					<img src="images/blog_img3.png">
+					<span class="middle"><i class="fa fa-eye"></i></span>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-6  hover1-child">
+					<img src="images/gallery_img3.png">
+					<span class="middle"><i class="fa fa-eye"></i></span>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="col-xl-4 col-lg-4 col-md-4 hover1-child hover1-child-big">
+			<img src="images/recent_up.png">
+			<span class="middle"><i class="fa fa-eye"></i></span>
+		</div>
+
+	</div>
+
+</div>
+<div class="container-fluid" id="slideshow-parent">
+	<div class="container-fluid" id="slideshow1">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 box active3"  >
+					<i class="fa fa-close"></i>
+					<img src="images/blog_img2.png">
+					<p>1/4</p>
+
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 box" >
+					<i class="fa fa-close"></i>
+					<img src="images/blog_img3.png">
+					<p>2/4</p>
+
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 box" >
+					<i class="fa fa-close"></i>
+					<img src="images/gallery_img3.png">
+					<p>3/4</p>
+
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 box" >
+					<i class="fa fa-close"></i>
+					<img src="images/recent_up.png">
+					<p>4/4</p>
+
+				</div> 
+
+
+
+			</div>	
+			<span><i class="fa fa-arrow-left" aria-hidden="true" id="icon1"></i>
+			</span>
+			<span><i class="fa fa-arrow-right" aria-hidden="true" id="icon2"></i></span>
+		</div>
+
+	</div>
+</div>
+
+<div class="container-fluid" id="slide-shadow">
+	
+</div>
+<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+	<!-- Loading Screen -->
+       <!--  <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+        </div> -->
+        <div data-u="slides" style="cursor:pointer;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;font-family: 'Roboto', sans-serif;" class="jssor-back">
+        	<div >
+        		
+        		<p id="jssor-black-p1">99</p>
+        		<p id="jssor-black-p2">Yellow Strawberry</p>
+        		<span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span>
+        		<p id="jssor-black-p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident expedita reprehenderit unde aspernatur enim doloremque porro, consectetur optio deserunt consequuntur exercitationem.</p>
+        	</div>
+        	<div >
+        		
+        		<p id="jssor-black-p2" style="padding-top: 150px">Bubbery</p>
+        		<span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span>
+        		<p id="jssor-black-p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident expedita reprehenderit unde aspernatur enim doloremque porro, consectetur optio deserunt consequuntur exercitationem.</p>
+        		
+
+        	</div>
+
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+        	<div data-u="prototype" class="i" style="width:16px;height:16px;">
+        		<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+        			<circle class="b" cx="8000" cy="8000" r="5800"></circle>
+        		</svg>
+        	</div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+        	<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+        		<polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+        	</svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+        	<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+        		<polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+        	</svg>
+        </div>
+    </div>
+    <div class="container" id="screen">
+    	<div class="row">
+    		<p>Pricing Plans</p>
+
+    	</div>
+
+    </div>
+    <div class="container">
+    	<div class="container package" >
+    		<div class="row">
+    			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 ">
+    				<div class="col-xl-12 package1">
+    					<p>Silver Package</p>
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package2">
+    					<p>$69.00</p>
+
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package3">
+    					<p>Basic hair Cut</p>
+
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package4">
+    					<p>Basic hair Cut</p>
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package5">
+    					<p>Basic hair Cut</p>
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package6">
+    					<button type="">ORDER NOW</button>
+    				</div>
+
+    			</div>
+    			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+    				<div class="col-xl-12 col-lg-12 col-md-12 package1">
+    					<p>Golden Package</p>
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package2">
+    					<p>$69.00</p>
+
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package3">
+    					<p>You must to do it</p>
+
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package4">
+    					<p>Inspite of difficulties</p>
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package5">
+    					<p>Inspite of challenges</p>
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package6">
+    					<button type="" class="active2">ORDER NOW</button>
+    				</div>
+
+    			</div>
+    			<div class="col-xl-4 col-lg-4 col-md-4" id="package-display">
+    				<div class="col-xl-12 col-lg-12 col-md-12 package1">
+    					<p>Plentinum Package</p>
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package2">
+    					<p>$69.00</p>
+
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package3">
+    					<p>Basic hair Cut</p>
+
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package4">
+    					<p>Basic hair Cut</p>
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package5">
+    					<p>Basic hair Cut</p>
+    				</div>
+    				<div class="col-xl-12 col-lg-12 col-md-12 package6">
+    					<button type="">ORDER NOW</button>
+    				</div>
+
+    			</div>
+
+    		</div>
+
+    	</div>
+    </div>
+    
+    <div class="container">
+    	<div class="row">
+    		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" id="tab-form">
+    			<form id="form1">
+    				<span ><i class="fa fa-close"></i></span>
+    				<p>Form title</p>
+    				<label for="name" >Name</label>
+    				<br>
+    				<input id="name" name="name" type="text" class="required" placeholder="Input field">
+    				<br>
+    				<label for="email" >Email</label>
+    				<br>
+    				<input id="email" name="email" type="text" class="required email" placeholder="Input field">
+    				<br>
+    				<label for="address">Address</label>
+    				<br>
+    				<input id="address" name="address" type="text" placeholder="Input field">
+    				<br>
+    				
+    				<input type="button" name="" value="Submit" class="btn btn-primary" id="check1">
+    				<br>
+    				
+    				<input type="button" name="" value="Close" class="btn btn-secondary">
+
+    			</form>
+    			
+    		</div>
+    		
+    	</div>
+    	
+    </div>
+    <div class="container" id="screen">
+    	<div class="row">
+    		<p>Frequently Asked Questions</p>
+
+    	</div>
+
+
+    </div>
+    <div class="container" id="box-all">
+    	<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+    		<div class="row">
+    			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="border-right: 1px dotted #777;border-bottom: 1px dotted #777">
+    				<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 screff1 wow slideInLeft" id="box-shadow">
+    					<p style=""><b>We Believe that Interior beauty Lasts long</b></p>
+    					<p style="color: #777">inppropriate behavior is often laught off as "boys will be boys" ,women face higher conduct standards especially in the work place.That's why it's crucial as women</p>
+    				</div>
+    				
+    				
+    			</div>
+    			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="border-bottom: 1px dotted #777">
+    				<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 screff2 wow slideInRight" id="box-shadow2">
+    					<p><b>We Believe that Interior beauty Lasts long</b></p>
+    					<p style="color: #777">inppropriate behavior is often laught off as "boys will be boys" ,women face higher conduct standards especially in the work place.That's why it's crucial as women</p>
+    				</div>
+    				
+    			</div>
+    			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="border-right: 1px dotted #777;border-bottom: 1px dotted #777;">
+    				<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 screff3 wow slideInLeft">
+    					<p><b>We Believe that Interior beauty Lasts long</b></p>
+    					<p style="color: #777">inppropriate behavior is often laught off as "boys will be boys" ,women face higher conduct standards especially in the work place.That's why it's crucial as women</p>
+    				</div>
+    				
+    			</div>
+    			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"  style="border-bottom: 1px dotted #777;">
+    				<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 screff4 wow slideInRight" id="box-shadow2">
+    					<p><b>We Believe that Interior beauty Lasts long</b></p>
+    					<p style="color: #777">inppropriate behavior is often laught off as "boys will be boys" ,women face higher conduct standards especially in the work place.That's why it's crucial as women</p>
+    				</div>
+    				
+    			</div>
+    			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="border-right: 1px dotted #777;">
+    				<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 screff5 wow slideInUp" id="box-shadow3"> 
+    					<p><b>We Believe that Interior beauty Lasts long</b></p>
+    					<p style="color: #777">inppropriate behavior is often laught off as "boys will be boys" ,women face higher conduct standards especially in the work place.That's why it's crucial as women</p>
+    				</div>
+    				
+    			</div>
+    			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" >
+    				<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 screff6 wow slideInUp">
+    					<p><b>We Believe that Interior beauty Lasts long</b></p>
+    					<p style="color: #777">inppropriate behavior is often laught off as "boys will be boys" ,women face higher conduct standards especially in the work place.That's why it's crucial as women</p>
+    				</div>
+    				
+    			</div>
+    			
+    		</div>
+    		
+    	</div>
+    	
+    </div>
+    <div class="container" id="screen">
+    	<div class="row">
+    		<p>Latest Blog Posts</p>
+
+    	</div>
+
+    </div> 
+    <div class="container">
+    	<div class="row">
+    		<div class="col-xl-4 col-lg-4 col-md-4  col-sm-6 col-6 ">
+    			<!-- <div class="card hover01 column" style="width: 18rem;">
+    				<figure>
+    					<img src="images/recent_up.png" class="card-img-top" alt="...">
+    					
+    				</figure>
+    				<div class="card-body">
+    					<p class="card-text">Portable Fashion for women</p>
+    					<p class="card-text">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestias praesentium, dolorem beatae reiciendis.</p>
+    					<span><i class="fa fa-calendar" aria-hidden="true"></i><span style="padding-left: 10px">13th Dec</span><i class="fa fa-heart" aria-hidden="true" style="padding-left: 10px"></i><span style="padding-left: 10px">15</span><i class="fa fa-comments-o" aria-hidden="true" style="padding-left: 10px"></i><span style="padding-left: 10px">05</span></span>
+    				</div>
+    			</div> -->
+    			<div class="hover01 column">
+    				<div>
+    					<figure><img src="images/recent_up.png" /></figure>
+    					<div class="hover01-text">
+    						<p style="padding-left: 10px;padding-top: 30px">Portable Fashion for women</p>
+    						<p style="padding-left: 10px;padding-top: 30px;color: #777">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestias praesentium, dolorem beatae reiciendis.</p>
+    						<p style="color: #777"><i class="fa fa-calendar" aria-hidden="true" style="padding-left: 10px;padding-right: 10px"></i>13th Dec<i class="fa fa-heart" aria-hidden="true" style="padding-left: 10px;padding-right: 10px"></i>15<i class="fa fa-comments-o" aria-hidden="true" style="padding-left: 10px;padding-right: 10px"></i>05</p>
+    						
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 ">
+    			<!-- <div class="card" style="width: 18rem;">
+    				<img src="images/blog_img2.png" class="card-img-top" alt="...">
+    				<div class="card-body">
+    					<p class="card-text">Portable Fashion for women</p>
+    					<p class="card-text">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestias praesentium, dolorem beatae reiciendis.</p>
+    					<span><i class="fa fa-calendar" aria-hidden="true"></i><span style="padding-left: 10px">13th Dec</span><i class="fa fa-heart" aria-hidden="true" style="padding-left: 10px"></i><span style="padding-left: 10px">15</span><i class="fa fa-comments-o" aria-hidden="true" style="padding-left: 10px"></i><span style="padding-left: 10px">05</span></span>
+    				</div>
+    			</div> -->
+    			<div class="hover01 column">
+    				<div>
+    					<figure><img src="images/blog_img2.png" /></figure>
+    					<div class="hover01-text">
+    						<p style="padding-left: 10px;padding-top: 30px">Portable Fashion for women</p>
+    						<p style="padding-left: 10px;padding-top: 30px;color: #777">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestias praesentium, dolorem beatae reiciendis.</p>
+    						
+    						<p style="color:#777"><i class="fa fa-calendar" aria-hidden="true" style="padding-left: 10px;padding-right: 10px"></i>13th Dec<i class="fa fa-heart" aria-hidden="true" style="padding-left: 10px;padding-right: 10px"></i>15<i class="fa fa-comments-o" aria-hidden="true" style="padding-left: 10px;padding-right: 10px"></i>05</p>
+    						
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="col-xl-4 col-lg-4 col-md-4  col-sm-6 col-12 " id="card-display">
+    			<!-- <div class="card" style="width: 18rem;">
+    				<img src="images/blog_img3.png" class="card-img-top" alt="...">
+    				<div class="card-body">
+    					<p class="card-text">Portable Fashion for women</p>
+    					<p class="card-text">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestias praesentium, dolorem beatae reiciendis.</p>
+    					<span><i class="fa fa-calendar" aria-hidden="true"></i><span style="padding-left: 10px">13th Dec</span><i class="fa fa-heart" aria-hidden="true" style="padding-left: 10px"></i><span style="padding-left: 10px">15</span><i class="fa fa-comments-o" aria-hidden="true" style="padding-left: 10px"></i><span style="padding-left: 10px">05</span></span>
+    				</div>
+    			</div> -->
+    			<div class="hover01 column">
+    				<div>
+    					<figure><img src="images/blog_img3.png" /></figure>
+    					<div class="hover01-text">
+    						<p style="padding-left: 10px;padding-top: 30px">Portable Fashion for women</p>
+    						<p style="padding-left: 10px;padding-top: 30px;color: #777">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestias praesentium, dolorem beatae reiciendis.</p>
+    						
+    						<p style="color: #777"><i class="fa fa-calendar" aria-hidden="true" style="padding-left: 10px;padding-right: 10px"></i>13th Dec<i class="fa fa-heart" aria-hidden="true" style="padding-left: 10px;padding-right: 10px"></i>15<i class="fa fa-comments-o" aria-hidden="true" style="padding-left: 10px;padding-right: 10px"></i>05</p>
+    						
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+
+
+    	</div>	
+    </div>
+    <div class="container-fluid">
+    	<div class="row" id="banner4">
+    		
+    		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+    			<p id="banner4-p1">Subcribe Our Newsletter</p>
+    			<p id="banner4-p2">We won't send any kind of spam</p>
+
+    		</div>
+    		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="banner4-button">
+    			<input type="text" name="" value="" placeholder="Enter email address">
+    			<button type="">SUBCRIBE</button>
+
+    		</div>
+    		
+    		
+    	</div>
+    	
+    </div>
+    <div class="container-fluid" id="footer">
+    	
+    	<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 ">
+    		<div class="row">
+    			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+    				<p style="color: white;padding-top: 70px">About Farfly</p>
+    				<p style="padding-top: 50px;color: #777" class="footertext-hover">For Bussiness</p>
+    				<p style="color: #777"  class="footertext-hover">Premium Plans</p>
+    				<p  style="color: #777"  class="footertext-hover">Reviews</p>
+    				<p  style="color: #777"  class="footertext-hover">How it Works</p>
+    				<p  style="color: #777"  class="footertext-hover">Farfly Blog</p>
+
+    			</div>
+    			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+    				<p style="color: white;padding-top: 70px">Company</p>
+    				<p  style="color: #777;padding-top: 50px"  class="footertext-hover">Product Tour</p>
+    				<p  style="color: #777"  class="footertext-hover">Pricing</p>
+    				<p  style="color: #777"  class="footertext-hover">Founding Members</p>
+    				<p  style="color: #777"  class="footertext-hover">Case Study</p>
+    				<p  style="color: #777"  class="footertext-hover">Product Updates</p>
+    				
+    			</div>
+    			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+    				<p style="color: white;padding-top: 70px">Support</p>
+    				<p  style="color: #777;padding-top: 50px"  class="footertext-hover">Documentation</p>
+    				<p  style="color: #777"  class="footertext-hover">Data Security</p>
+    				<p  style="color: #777"  class="footertext-hover">Site Performance</p>
+    				<p  style="color: #777"  class="footertext-hover">Action Plan</p>
+    				<p  style="color: #777"  class="footertext-hover">Resources</p>
+
+    			</div>
+    			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+    				<p style="color: white;padding-top: 70px">Yellow Strawberry</p>
+    				<div class="row">
+    					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" id="footer-img">
+    						<img src="images/1 (3).jpg" alt="">
+    					</div>
+    					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" id="footer-img">
+    						<img src="images/2 (2).jpg" alt="">
+    						
+    					</div>
+    					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" id="footer-img">
+    						<img src="images/3.png" alt="">
+    						
+    					</div>
+    				</div>
+    				<div class="row">
+
+    					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" id="footer-img">
+    						<img src="images/4 (3).jpg" alt="">
+    					</div>
+    					
+    					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" id="footer-img">
+    						<img src="images/1 (3).jpg" alt="">
+    					</div>
+    					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" id="footer-img">
+    						<img src="images/2 (2).jpg" alt="">
+    						
+    					</div>
+    				</div>
+    				<div class="row">
+    					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" id="footer-img">
+    						<img src="images/3.png" alt="">
+    						
+    					</div>
+    					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" id="footer-img">
+    						<img src="images/4 (3).jpg" alt="">
+    						
+    					</div>
+    					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" id="footer-img">
+    						
+    						
+    					</div>
+    				</div>
+
+    				
+
+    			</div>
+    		</div>
+    		<div class="row" id="end">
+    			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+    				<p>2019 All rights reserved| Made and design by <i class="fa fa-heart" aria-hidden="true"></i> <span style="color:#16D6CE">Vinh</span></p>
+
+    			</div>
+    			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+    				<ul>
+    					<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+    					<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+    					<li><i class="fa fa-behance" aria-hidden="true"></i></li>
+    					<li><i class="fa fa-google" aria-hidden="true"></i></li>
+    				</ul>
+
+    			</div>
+
+    		</div>
+
+    	</div>
+
+
+    	
+    	
+    </div>
+</div>
+<div id="wrapper2">
+	<div class="container-fluid" id="wr-banner1">
+		<p style="padding-top: 150px">Home<i class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 10px;margin-right: 10px"></i>Gallery</p>
+		<p style="font-size: 30px;padding-bottom: 150px">SCREEN SHOT GALLERY</p>
+	</div>
+	<div class="container" id="screen">
+		<div class="row">
+			<p>Summary</p>
+
+		</div>
+
+	</div>
+	<div class="container">
+		<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+			<div class="row" id="div-count">
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+					<p><b>Employee</b></p> 
+					<p class="counter"><b>1,000</b></p>
+					
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"> 
+					<p><b>Works</b></p> 
+					<p class="counter"><b>4,000.00</b></p>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"> 
+					<p><b>Products</b></p> 
+					<p class="counter"><b>1,000,000.00</b></p>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	<div class="container" id="screen">
+		<div class="row">
+			<p>Screens Gallery</p>
+
+		</div>
+
+	</div>
+	<div class="container" id="hover2" style="margin-bottom: 50px;">
+	<div class="row">
+		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 hover2-child" ">
+					<img src="images/blog_img2.png">
+					<span class="middle"><i class="fa fa-eye"></i></span>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 hover2-child">
+					<img src="images/blog_img3.png">
+					<span class="middle"><i class="fa fa-eye"></i></span>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 hover2-child">
+					<img src="images/gallery_img3.png">
+					<span class="middle"><i class="fa fa-eye"></i></span>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="col-xl-4 col-lg-4 col-md-4 hover2-child hover2-child-big">
+			<img src="images/recent_up.png">
+			<span class="middle"><i class="fa fa-eye"></i></span>
+		</div>
+
+	</div>
+
+</div>
+<div class="container-fluid" id="slideshow-parent2">
+	<div class="container-fluid" id="slideshow2">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 box2 active4"  >
+					<i class="fa fa-close"></i>
+					<img src="images/blog_img2.png">
+					<p>1/4</p>
+
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 box2" >
+					<i class="fa fa-close"></i>
+					<img src="images/blog_img3.png">
+					<p>2/4</p>
+
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 box2" >
+					<i class="fa fa-close"></i>
+					<img src="images/gallery_img3.png">
+					<p>3/4</p>
+
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 box2" >
+					<i class="fa fa-close"></i>
+					<img src="images/recent_up.png">
+					<p>4/4</p>
+
+				</div> 
+
+
+
+			</div>	
+			<span><i class="fa fa-arrow-left" aria-hidden="true" id="icon12"></i>
+			</span>
+			<span><i class="fa fa-arrow-right" aria-hidden="true" id="icon22"></i></span>
+		</div>
+
+	</div>
+</div>
+
+<div class="container-fluid" id="slide-shadow2">
+	
+</div>
+	<div class="container-fluid" id="footer">
+    	
+    	<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 ">
+    		<div class="row">
+    			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+    				<p style="color: white;padding-top: 70px">About Farfly</p>
+    				<p style="padding-top: 50px;color: #777" class="footertext-hover">For Bussiness</p>
+    				<p style="color: #777"  class="footertext-hover">Premium Plans</p>
+    				<p  style="color: #777"  class="footertext-hover">Reviews</p>
+    				<p  style="color: #777"  class="footertext-hover">How it Works</p>
+    				<p  style="color: #777"  class="footertext-hover">Farfly Blog</p>
+
+    			</div>
+    			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+    				<p style="color: white;padding-top: 70px">Company</p>
+    				<p  style="color: #777;padding-top: 50px"  class="footertext-hover">Product Tour</p>
+    				<p  style="color: #777"  class="footertext-hover">Pricing</p>
+    				<p  style="color: #777"  class="footertext-hover">Founding Members</p>
+    				<p  style="color: #777"  class="footertext-hover">Case Study</p>
+    				<p  style="color: #777"  class="footertext-hover">Product Updates</p>
+    				
+    			</div>
+    			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+    				<p style="color: white;padding-top: 70px">Support</p>
+    				<p  style="color: #777;padding-top: 50px"  class="footertext-hover">Documentation</p>
+    				<p  style="color: #777"  class="footertext-hover">Data Security</p>
+    				<p  style="color: #777"  class="footertext-hover">Site Performance</p>
+    				<p  style="color: #777"  class="footertext-hover">Action Plan</p>
+    				<p  style="color: #777"  class="footertext-hover">Resources</p>
+
+    			</div>
+    			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+    				<p style="color: white;padding-top: 70px">Legal</p>
+    				<p  style="color: #777;padding-top: 50px"  class="footertext-hover">Documentation</p>
+    				<p  style="color: #777"  class="footertext-hover">Data Security</p>
+    				<p  style="color: #777"  class="footertext-hover">Site Performance</p>
+    				<p  style="color: #777"  class="footertext-hover">Opt-Out</p>
+    				
+
+    				</div>
+
+    				
+
+    			</div>
+    			<div class="row" id="end">
+    			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+    				<p>2019 All rights reserved| Made and design by <i class="fa fa-heart" aria-hidden="true"></i> <span style="color:#16D6CE">Vinh</span></p>
+
+    			</div>
+    			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+    				<ul>
+    					<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+    					<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+    					<li><i class="fa fa-behance" aria-hidden="true"></i></li>
+    					<li><i class="fa fa-google" aria-hidden="true"></i></li>
+    				</ul>
+
+    			</div>
+
+    		</div>
+    		</div>
+    		
+
+    	</div>
+
+
+    	
+    	
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>
